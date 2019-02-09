@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
+    'challenges',
 ]
 
 MIDDLEWARE = [
@@ -120,7 +120,7 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
-LOGIN_REDIRECT_URL = '/blog/'
+LOGIN_REDIRECT_URL = '/challenges/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 prod_db  =  dj_database_url.config(conn_max_age=500)
