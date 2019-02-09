@@ -5,7 +5,14 @@
   <p>Welcome to You Go Girl, a website developed by <em>KAVA</em> at HackKU!</p>
   <p>The site has the following attributes:</p>
   <ul>
-    <li><strong>Challenge posts:</strong> {{ num_challenge_posts }}</li>
+    <strong>Challenge posts:</strong> {{ num_challenge_posts }}
 
+    {% for post in challenges %}
+    <li> 
+      <strong>{{post.title}}</strong>
+      <br>
+      {{post.text}}
+    </li>
+    {% endfor %}
   </ul>
 {% endblock %}
