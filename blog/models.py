@@ -5,7 +5,7 @@ class BlogPost(models.Model):
     text = models.TextField(max_length=200)
     # author = ForeignKey(User)
 
-    def __str__():
+    def __str__(self):
         return self.title
     
 
