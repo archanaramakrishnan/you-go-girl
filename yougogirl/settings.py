@@ -27,7 +27,7 @@ SECRET_KEY = 'h4rh&z=!9t!+33ul#4zs=7dr%w=b7w+6sy_of(26dps0by!kh0'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['you-go-girl.herokuapp.com', 'www.yogogrl.com', '127.0.0.1', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['you-go-girl.herokuapp.com', 'www.yougogrl.com', '127.0.0.1', '127.0.0.1:8000']
 
 
 # Application definition
@@ -67,6 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
             ],
         },
     },
@@ -97,7 +98,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-us'
 
 TIME_ZONE = 'UTC'
 

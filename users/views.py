@@ -5,9 +5,6 @@ from users.models import Profile
 def profile(request):
     username=None
 
-    # if request.user.is_authenticated():
-    #     username = request.user.username
-
     if request.user.profile.role==2:
         mntr_status = True
 
