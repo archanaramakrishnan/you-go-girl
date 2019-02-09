@@ -1,1 +1,1 @@
-web: gunicorn yougogirl.wsgi --log-file -
+web: gunicorn yougogirl.wsgi
