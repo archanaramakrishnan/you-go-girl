@@ -14,8 +14,6 @@ class Profile(models.Model):
     location = models.CharField(max_length=30, blank=True)
     birthdate = models.DateField(null=True, blank=True)
     role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, null=True, blank=True)
-    is_mentor = models.BooleanField(default=False)
-    is_mentee = models.BooleanField(default=True)
     bio = models.TextField(max_length=500, blank=True)
 
     def __str__(self): 

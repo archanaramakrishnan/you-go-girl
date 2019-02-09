@@ -8,9 +8,13 @@
     {% trans  "THIS IS THE PROFILE PAGE" %}
   </p>
   <ul>
-    <strong>Is this user a mentor?:</strong> {{ mentor_status }}
+    <strong>Is this user a mentor?:</strong> {{ mentor_status }} <br>
+    <strong>Name:</strong> {{ fname }} {{ lname }}<br>
+    <strong>Email:</strong> {{ email }}<br>
+    <strong>Location:</strong> {{ location }}<br>
+    <strong>Bio:</strong> {{ bio }}<br>
 
 
-    </li>
+
   </ul>
 {% endblock %}
