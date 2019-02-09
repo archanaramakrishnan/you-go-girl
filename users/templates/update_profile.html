@@ -1,0 +1,16 @@
+
+{% extends "base_generic.html" %}
+{% load i18n %}
+
+{% block content %}
+  <h1>You Go Girl Profile</h1>
+  <p>
+    {% trans  "THIS IS THE PROFILE PAGE" %}
+  </p>
+  <ul>
+    <strong>Is this user a mentor?:</strong> {{ mentor_status }}
+
+
+    </li>
+  </ul>
+{% endblock %}

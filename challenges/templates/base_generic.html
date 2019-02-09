@@ -16,7 +16,7 @@
       {% block sidebar %}
         <ul class="sidebar-nav">
           {% if user.is_authenticated %}
-          <li>Hello, <a href="">{{user.get_username}}</a>!</li>
+          <li>Hello, <a href="{% url 'profile' %}">{{user.get_username}}</a>!</li>
           {% endif %}
           <li><a href="{% url 'challenges' %}">Community Challenges</a></li>
           <li><a href="">Messages</a></li>

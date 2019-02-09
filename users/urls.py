@@ -4,6 +4,6 @@ from . import views
 
 urlpatterns = [
     # Behavior defined in yougogirl/blog/views.py as blog()
-    #URL to access this page: http://127.0.0.1:8000/challenges/
-    path('', views.challenges, name='challenges'),
+    #URL to access this page: http://127.0.0.1:8000/profile/
+    path('', views.profile, name='profile'),
 ]
