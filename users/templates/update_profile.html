@@ -19,10 +19,16 @@
     <strong>Skill level:</strong> {{ skill }}<br>
     <strong>Availability:</strong> {{ availability }}<br>
 
-<!--do an if roll is mentor show this else if show that-->
-<strong>Grade:</strong> {{ grade }}<br>
-<!--do an if roll is mentor show this else if show that-->
-<strong>College/Company:</strong> {{ collegecomp }}<br>
+    {% if mentor_status == False %}
+
+      <strong>Grade in school:</strong> {{ mentee_info.grade }}<br>
+
+    {% else %}
+      <strong>hours avail per wk</strong> {{mentor_info.hrs_available}}
+
+    {% endif %}
+
+
 
 
 
@@ -44,7 +50,7 @@
 <div class="jumbotron">
   <div class="container text-center">
     <h1>{{ fname }} {{ lname }}</h1>      
-    <p>Mentor</p>
+    <p><strong>Am I a mentor?:</strong> {{ mentor_status }} <br></p>
     <p>  {{ email }} </p>
     <p>{{ location }} </p>
   </div>
@@ -68,7 +74,7 @@
     </div>
     <div class="col-sm-3">
       <p>I am available {{ availability }} </p>
-      <img src="https://www.vlsa.ca/wp-content/uploads/Mentor.png" class="img-responsive" style="width:100%" alt="Image">
+      <img src="https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/wp-cms/uploads/2018/07/p-1-90205776-heres-proof-that-the-four-day-work-week-works.jpg" class="img-responsive" style="width:100%" alt="Image">
     </div>
   </div>
 </div><br>
