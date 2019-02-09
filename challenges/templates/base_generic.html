@@ -27,7 +27,7 @@
 
  <!-- Side navigation -->
  <div class="sidenav">
-    <h5> <p class="text-white">Hello, <a href=""> {{user.get_username}}!</a></p></h5>
+    <h5> <p class="text-white">Hello, <a href="{% url 'profile' %}"> {{user.get_username}}!</a></p></h5>
         <a href="{% url 'challenges' %}"><p class="text-white">Community Challenges</p></a></a>
         <a href=""><p class="text-white">Messages</p></a></span>
         <a  href="{% url 'logout' %}"><p class="text-white">Log Out</p></a></span> 
