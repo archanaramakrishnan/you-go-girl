@@ -8,30 +8,7 @@
     {% trans  "THIS IS THE PROFILE PAGE" %}
   </p>
   <ul>
-      
-    <!--os mentor oprint mentor or mentee-->
-    <strong>Is this user a mentor?:</strong> {{ mentor_status }} <br>
-    <strong>Name:</strong> {{ fname }} {{ lname }}<br>
-    <strong>Email:</strong> {{ email }}<br>
-    <strong>Location:</strong> {{ location }}<br>
-    <strong>Programming Language:</strong> {{ proglang }}<br>
-    <strong>Language:</strong> {{ lang }}<br>
-    <strong>Skill level:</strong> {{ skill }}<br>
-    <strong>Availability:</strong> {{ availability }}<br>
-
-    {% if mentor_status == False %}
-
-      <strong>Grade in school:</strong> {{ mentee_info.grade }}<br>
-
-    {% else %}
-      <strong>hours avail per wk</strong> {{mentor_info.hrs_available}}
-
-    {% endif %}
-
-
-
-
-
+  
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +27,7 @@
 <div class="jumbotron">
   <div class="container text-center">
     <h1>{{ fname }} {{ lname }}</h1>      
-    <p><strong>Am I a mentor?:</strong> {{ mentor_status }} <br></p>
+    <p><strong>It is {{ mentor_status }} that I am a Mentor</strong>  <br></p>
     <p>  {{ email }} </p>
     <p>{{ location }} </p>
   </div>
@@ -58,33 +35,52 @@
   
 <div class="container-fluid bg-3 text-center">    
 
-  <h3>My profile</h3><br>
+    <h3>My profile</h3><br>
   <div class="row">
     <div class="col-sm-3">
-      <p>My skill level is: {{ skill }} </p>
-      <img src="http://www.cedefop.europa.eu/files/images/identyfying_skills_needs_360x240.jpg" class="img-responsive" style="width:90%" alt="Image">
+      <p>
+          {% if mentor_status == False %}
+
+          <strong>Grade in school:{{ mentee_info.grade }}</strong> <br>
+    
+        {% else %}
+          <strong>University/Company: {{mentor_info.university}}/{{mentor_info.company}} </strong><br>
+    
+        {% endif %}
+      </p>
+      <img src="https://www.fastweb.com/uploads/article_photo/photo/2035665/crop635w_5-testing-tips-for-your-hardest-IB-exams.jpg" class="img-responsive" style="width:90%" alt="Image">
     </div>
     <div class="col-sm-3"> 
-      <p>The language I speak is: {{ lang }} </p>
+      <p><strong>The language I speak is: {{ spoken_language }}</strong> </p>
       <img src="https://ied.eu/wp-content/uploads/2017/05/language.jpg" class="img-responsive" style="width:90%" alt="Image">
     </div>
     <div class="col-sm-3"> 
-      <p>The programming language I like is: {{ proglang }} </p>
+      <p><strong>The programming language I like is: {{ preferred_programming_language }} </strong></p>
       <img src="https://www.freelancinggig.com/blog/wp-content/uploads/2017/09/Programming-Languages-for-Windows-Application.jpg" class="img-responsive" style="width:90%" alt="Image">
     </div>
     <div class="col-sm-3">
-      <p>I am available {{ availability }} </p>
-      <img src="https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/wp-cms/uploads/2018/07/p-1-90205776-heres-proof-that-the-four-day-work-week-works.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <p>
+          {% if mentor_status == False %}
+
+          <strong>Skill level:{{ mentee_info.skill_level }}</strong> <br>
+    
+        {% else %}
+          <strong>Hours Available:{{mentor_info.hrs_available}}</strong>  <br>
+    
+        {% endif %}
+      </p>
+      <img src="https://www.lifewire.com/thmb/fG4Pku7nfSDuIkNVPTIqOkIvOmE=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/dates-and-deadlines-banner--laptop-computer-with-calendar--flat-design--vector-illustration-on-background--938323070-5af1a9fe3418c600387f7b2b.jpg" class="img-responsive" style="width:100%" alt="Image">
     </div>
   </div>
 </div><br>
 
-<div class="container-fluid bg-3 text-center">    
-  <div class="row">
-    <div class="col-sm-3">
-  
-    </div>
-  </div>
+ 
+<div class="container-fluid bg-3 text-center">   
+    <hr>
+    <h3>My bio</h3><br>
+
+        <p>{{bio}}</p>
+
 </div><br><br>
 
 </ul>
