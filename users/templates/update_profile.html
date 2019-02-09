@@ -9,13 +9,81 @@
   </p>
   <ul>
       
+    <!--os mentor oprint mentor or mentee-->
     <strong>Is this user a mentor?:</strong> {{ mentor_status }} <br>
     <strong>Name:</strong> {{ fname }} {{ lname }}<br>
     <strong>Email:</strong> {{ email }}<br>
     <strong>Location:</strong> {{ location }}<br>
-    <strong>Bio:</strong> {{ bio }}<br>
+    <strong>Programming Language:</strong> {{ proglang }}<br>
+    <strong>Language:</strong> {{ lang }}<br>
+    <strong>Skill level:</strong> {{ skill }}<br>
+    <strong>Availability:</strong> {{ availability }}<br>
+
+<!--do an if roll is mentor show this else if show that-->
+<strong>Grade:</strong> {{ grade }}<br>
+<!--do an if roll is mentor show this else if show that-->
+<strong>College/Company:</strong> {{ collegecomp }}<br>
 
 
 
-  </ul>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>W3schools templet</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>{{ fname }} {{ lname }}</h1>      
+    <p>Mentor</p>
+    <p>  {{ email }} </p>
+    <p>{{ location }} </p>
+  </div>
+</div>
+  
+<div class="container-fluid bg-3 text-center">    
+
+  <h3>My profile</h3><br>
+  <div class="row">
+    <div class="col-sm-3">
+      <p>My skill level is: {{ skill }} </p>
+      <img src="http://www.cedefop.europa.eu/files/images/identyfying_skills_needs_360x240.jpg" class="img-responsive" style="width:90%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>The language I speak is: {{ lang }} </p>
+      <img src="https://ied.eu/wp-content/uploads/2017/05/language.jpg" class="img-responsive" style="width:90%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>The programming language I like is: {{ proglang }} </p>
+      <img src="https://www.freelancinggig.com/blog/wp-content/uploads/2017/09/Programming-Languages-for-Windows-Application.jpg" class="img-responsive" style="width:90%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p>I am available {{ availability }} </p>
+      <img src="https://www.vlsa.ca/wp-content/uploads/Mentor.png" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-3">
+  
+    </div>
+  </div>
+</div><br><br>
+
+</ul>
 {% endblock %}
+      
+
+</body>
+</html>
