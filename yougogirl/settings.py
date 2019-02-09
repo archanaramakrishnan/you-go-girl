@@ -26,7 +26,7 @@ SECRET_KEY = 'h4rh&z=!9t!+33ul#4zs=7dr%w=b7w+6sy_of(26dps0by!kh0'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['herokudjangoapp.herokuapp.com', '127.0.0.1', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['you-go-girl.herokuapp.com', 'yougogirlmentorship.com' '127.0.0.1', '127.0.0.1:8000']
 
 
 # Application definition
