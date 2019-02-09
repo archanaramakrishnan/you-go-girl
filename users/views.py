@@ -13,6 +13,8 @@ def profile(request):
 
     mentor_info = {
         'hrs_available': request.user.profile.hrs_per_week_available,
+        'university': request.user.profile.university,
+        'company': request.user.profile.company,
     }
 
     mentee_info = {
@@ -27,6 +29,8 @@ def profile(request):
         'email': request.user.email, 
         'location': request.user.profile.location,
         'bio': request.user.profile.bio,
+        'spoken_language': request.user.profile.spoken_language,
+        'preferred_programming_language': request.user.profile.preferred_programming_language,
         'mentor_info': mentor_info,
         'mentee_info': mentee_info,
     }
