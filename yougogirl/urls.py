@@ -22,6 +22,9 @@ urlpatterns = [
     path('challenges/', include('challenges.urls')),
     path('profile/', include('users.urls')),
 
+    # Homepage
+    path('', include('users.urls')),
+
 
     #Add Django site authentication urls (for login, logout, password management)
     path('accounts/', include('django.contrib.auth.urls')),
