@@ -17,7 +17,13 @@
    background-size: cover;
    position: relative;
  }
-
+.signup{
+  background-color: rgba(255, 255, 255, 0.911);
+  width: 800px;
+  border: 15px solid rgb(221, 41, 41);
+  padding: 25px;
+  margin: 25px;
+}
 
  .col-sm-4 {
   text-align: left;

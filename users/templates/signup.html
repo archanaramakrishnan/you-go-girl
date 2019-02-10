@@ -4,7 +4,17 @@
 
 
 {% block content %}
-  <h2>Sign up</h2>
+<br>
+<h1><strong>WELCOME TO "YOU GO GIRL!"</strong></h1>
+<p>
+    You Go Girl is a website developed by KAVA at HackKU to empower girls/women in tech.
+  </p>
+<hr>
+<a href="{% url 'login'%}"><button type="button" class="btn btn-danger">Click here to login to existing account</button></a>
+<br>  <br> 
+<p>or</p>
+<br>  
+<h2>Sign up</h2>
   <form method="post">
     {% csrf_token %}
     {% for field in form %}
