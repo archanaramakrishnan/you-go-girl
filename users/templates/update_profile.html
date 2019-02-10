@@ -15,6 +15,16 @@
     <strong>Location:</strong> {{ location }}<br>
     <strong>Bio:</strong> {{ bio }}<br>
 
+    {% if mentor_status == False %}
+
+      <strong>Grade in school:</strong> {{ mentee_info.grade }}<br>
+
+    {% else %}
+      <strong>hours avail per wk</strong> {{mentor_info.hrs_available}}
+
+    {% endif %}
+
+
 
 
   </ul>

@@ -16,6 +16,26 @@ class Profile(models.Model):
     role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, null=True, blank=True)
     bio = models.TextField(max_length=500, blank=True)
 
+    # Mentor Attributes
+    hrs_per_week_available = models.IntegerField(default=1)
+
+    # Mentee Attributes
+    NEVER_CODED_BEFORE = 1
+    BEGINNER = 2
+    INTERMEDIATE = 3
+    ADVANCED = 4
+    EXPERT = 5
+    MENTEE_SKILL_LEVELS = (
+        (NEVER_CODED_BEFORE, 'Never Coded Before'),
+        (BEGINNER, 'Beginner'),
+        (INTERMEDIATE, 'Intermediate'),
+        (ADVANCED, 'Advanced'),
+        (EXPERT, 'Expert'),
+    )
+    skill_level = models.PositiveSmallIntegerField(choices=MENTEE_SKILL_LEVELS, null=True, blank=True)
+    grade_in_school = models.IntegerField(default=1)
+
+
     def __str__(self): 
         return self.user.username
 
