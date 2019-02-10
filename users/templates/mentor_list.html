@@ -1,0 +1,34 @@
+
+{% extends "base_generic.html" %}
+{% load i18n %}
+
+{% block content %}
+  <h1>{% trans "You Go Girl Mentors Availble" %}</h1>
+
+  <p>The site has the following attributes:</p>
+  <ul>
+    <strong>Mentors available:</strong> {{ num_mentors }}
+ 
+          {% for mentor in mentors %}
+          <div class="mentors">
+
+          <h3><small>{{mentor.first_name}} {{mentor.last_name}}</small></h3>
+          {{mentor.profile.company}} {{mentor.profile.location}}<br>
+          {{mentor.profile.university}}<br>
+          <strong>{{mentor.email}}</strong>
+
+          Spoken language: {{mentor.profile.spoken_language}} <br>
+          Preferred programming language: {{mentor.profile.preferred_programming_language}} <br><br>
+
+          <strong>Bio</strong><br>
+          {{mentor.profile.bio}}
+          <br><br>
+        </div> 
+
+      
+      <br><br>
+    {% endfor %}
+ 
+
+  </ul>
+{% endblock %}

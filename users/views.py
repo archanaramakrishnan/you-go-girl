@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect
 from users.models import Profile
 from users.forms import SignUpForm
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
+
 
 def profile(request):
     username=None
@@ -67,3 +69,15 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
+
+def mentor_list(request):
+    num_mentors = User.objects.filter(profile__role=2).count()
+    mentors = User.objects.filter(profile__role=2).order_by('-last_name')
+
+    context = {
+        'num_mentors': num_mentors,
+        'mentors': mentors,
+    }
+
+
+    return render(request, 'mentor_list.html', context=context)
