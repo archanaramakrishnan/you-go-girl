@@ -5,14 +5,14 @@
 {% block content %}
   <h1>{% trans "You Go Girl Challenges" %}</h1>
   <p>
-    Welcome to You Go Girl, a website developed by KAVA at HackKU!
+    {% trans "Welcome to You Go Girl, a website developed by KAVA at HackKU!" %}
   </p>
   <p>The site has the following attributes:</p>
   <ul>
     <strong>Challenge posts:</strong> {{ num_challenge_posts }}
 
 
- 
+
       <div class="challenges">
           {% for post in challenges %}
           <h4><small>Challenge</small></h4>
@@ -29,8 +29,8 @@
       </form>
       <br><br>
     {% endfor %}
-    </div> 
- 
+    </div>
+
 
   </ul>
 {% endblock %}

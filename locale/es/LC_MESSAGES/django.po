@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-09 21:12-0600\n"
+"POT-Creation-Date: 2019-02-09 21:21-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,15 +20,20 @@ msgstr ""
 
 #: challenges/templates/challenges.html:6
 msgid "You Go Girl Challenges"
-msgstr "spanish something"
+msgstr "'ahí vas niña' retos"
+
+#: challenges/templates/challenges.html:8
+#, fuzzy
+msgid "Welcome to You Go Girl, a website developed by KAVA at HackKU!"
+msgstr "Bienvenido a 'ahí vas niña', un sitio web desarrollado por KAVA en HackKU!"
 
 #: users/templates/update_profile.html:6
 msgid "You Go Girl Profile"
-msgstr "something in spanish"
+msgstr "'ahí vas niña' perfil"
 
 #: users/templates/update_profile.html:8
 msgid "THIS IS THE PROFILE PAGE"
-msgstr "pretend this says Profile in spanish"
+msgstr "ESTA ES LA PAGINA DE PERFIL"
 
 #: yougogirl/settings.py:108
 msgid "Spanish"
@@ -37,7 +42,3 @@ msgstr ""
 #: yougogirl/settings.py:109
 msgid "English"
 msgstr ""
-
-#, fuzzy
-#~ msgid "  Welcome to You Go Girl, a website developed by KAVA at HackKU! "
-#~ msgstr "That same message but in spanish"
