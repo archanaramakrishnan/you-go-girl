@@ -15,9 +15,13 @@ class Profile(models.Model):
     birthdate = models.DateField(null=True, blank=True)
     role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, null=True, blank=True)
     bio = models.TextField(max_length=500, blank=True)
+    spoken_language = models.CharField(max_length=50, blank=True)
+    preferred_programming_language = models.CharField(max_length=50, blank=True)
 
     # Mentor Attributes
     hrs_per_week_available = models.IntegerField(default=1)
+    university = models.CharField(max_length=100, blank=True)
+    company = models.CharField(max_length=100, blank=True)
 
     # Mentee Attributes
     NEVER_CODED_BEFORE = 1
